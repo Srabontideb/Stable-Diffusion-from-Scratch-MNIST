@@ -204,19 +204,6 @@ for p_e, p in zip(ema_model.parameters(), model.parameters()):
 
 ---
 
-## Why no VAE?
-
-Real Stable Diffusion uses a **Variational Autoencoder (VAE)** to compress images into a small latent space before diffusing. This is needed for large images:
-
-| | This code | Stable Diffusion |
-|---|---|---|
-| Image size | 28×28 = **784 pixels** | 512×512 = 786,432 pixels |
-| VAE needed? | No | Yes — 48× compression |
-| U-Net operates on | 784 values | 64×64×4 = 16,384 values |
-
-At 28×28, pixel-space diffusion is already fast and cheap. The VAE is a **scaling solution** — it only becomes necessary when images grow too large for the U-Net to process directly.
-
----
 
 ## Paper reference
 
