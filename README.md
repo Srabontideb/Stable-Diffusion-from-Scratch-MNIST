@@ -101,7 +101,7 @@ All hyperparameters are at the top of the file:
 IMG_SIZE   = 28     # image resolution (MNIST is 28×28)
 CHANNELS   = 1      # 1 = grayscale, 3 = RGB
 BATCH_SIZE = 128
-EPOCHS     = 10     # increase to 30+ for sharper results
+EPOCHS     = 30     
 LR         = 3e-4   # Adam learning rate
 T          = 300    # total diffusion timesteps
 ```
